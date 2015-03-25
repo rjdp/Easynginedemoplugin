@@ -12,11 +12,13 @@ In a `Cement App`(a command line utitily built on `Cement Framework`) a plugin i
 class EEApp(foundation.CementApp):
         class Meta:
             label = 'ee'
+            # list of paths where this app looks for plugins(.py files)
             plugin_config_dirs=[
                 '/etc/ee/plugins.d',
                 '~/.ee/plugins.d',
                 '/vagrant/test/easyengine/plugins/myplugin/config/plugins.d',
                 ]
+            # list of paths where this app looks for plugin configuration files(.conf files)
             plugin_dirs=[
                 '/usr/lib/ee/plugins',
                 '~/.ee/plugins',
@@ -61,6 +63,8 @@ class EEApp(foundation.CementApp):
   ```
  3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in     `CementApp.Meta.plugin_config_dirs`). To enable the `rtdemo` plugin the configuration goes as follows.
 ```python
+# name plugin file without extention 
 [rtdemo]
+# if true enables the plugin , if false disables it
 enable_plugin = true
 ```

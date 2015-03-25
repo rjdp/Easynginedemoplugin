@@ -63,7 +63,7 @@ class EEApp(foundation.CementApp):
   ```
  3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in     `CementApp.Meta.plugin_config_dirs`). To enable the `rtdemo` plugin the configuration goes as follows.
 ```python
-# name plugin file without extention 
+# name plugin file without extension enclosed in rect. braces, plugin's config. follows after it .
 [rtdemo]
 # if true enables the plugin , if false disables it
 enable_plugin = true

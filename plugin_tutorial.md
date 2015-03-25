@@ -1,7 +1,7 @@
 
 # EasyEngine Plugin Tutorial
 
-In a `Cement App`(a command line utitily built on `Cement Framework`) a plugin is any piece of python code that can be enabled/disabled  through its configuraton present in 'plugin configuration files' , if enabled , these piece(s) are allowed to integrate in the app during the app build / integration process, else denied. Typically these piece(s) contains one or more Cement Controller definition and their registration with the `app`.
+In a `Cement App`(a command line utitily built on `Cement Framework`) a plugin is any piece of python code that can be enabled/disabled  through its configuraton present in `plugin configuration files` , if enabled , these piece(s) are allowed to integrate in the app during the app build / integration process, else denied. Typically these piece(s) contains one or more `Cement Controller` definition and their registration with the `app`.
 
 
 **How does a Cement App locate its Plugins and their Configuration**
@@ -29,9 +29,9 @@ class EEApp(foundation.CementApp):
 
 
 
- 1. `Boss` can used to standardize and automate the task of creating directory structure and template for your new plugin , [see this.](http://docs.rtcamp.com/easyengine/dev/plugins/)
+ 1. `Boss` can be used to standardize and automate the task of creating directory structure and template for your new plugin , [see this for more.](http://docs.rtcamp.com/easyengine/dev/plugins/)
 
- 2. A sample plugin. let this be 'rtdemo.py' file(must exist in any of path listed in `CementApp.Meta.plugin_dirs`).
+ 2. A sample plugin. let this be `rtdemo.py` file(must exist in any of path listed in `CementApp.Meta.plugin_dirs`).
 ```python
 """
 Rtdemo plugin for Easyengine.
@@ -59,7 +59,7 @@ class rteedemoPluginController(CementBaseController):
 def load(app):
     handler.register(rteedemoPluginController)
 ```
- 3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in     `CementApp.Meta.plugin_config_dirs`). To enable the rtdemo plugin the configuration goes as follows.
+ 3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in     `CementApp.Meta.plugin_config_dirs`). To enable the `rtdemo` plugin the configuration goes as follows.
 ```python
 [rtdemo]
 enable_plugin = true

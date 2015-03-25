@@ -1,7 +1,7 @@
 
 # EasyEngine Plugin Tutorial
 
-In a `Cement App`(a command line utitily built on `Cement Framework`) a plugin is any piece of python code that can be enabled/disabled  through its configuraton present in `plugin configuration file` , if enabled , these piece(s) are allowed to integrate in the app during the app build / integration process, else denied. Typically these piece(s) contains one or more `Cement Controller` definition and their registration with the `app`.
+In a `Cement App`(a command line utitily built on `Cement Framework`) a plugin is any piece of python code that can be enabled/disabled  through its configuraton present in `plugin configuration file` , if enabled , these piece(s) are run during the app build/integration process, else not. Typically these piece(s) contains one or more `Cement Controller` definition and their registration with the `app`.
 
 
 **How does a Cement App locate its Plugins and their Configuration**

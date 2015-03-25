@@ -59,7 +59,7 @@ class rteedemoPluginController(CementBaseController):
 def load(app):
     handler.register(rteedemoPluginController)
 ```
- 3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in `CementApp.Meta.plugin_config_dirs`). To enable the rtdemo plugin the configuration goes as follows.
+  3. Configuration of above Plugin(can be written in any of the `.conf` files present on path listed in `CementApp.Meta.plugin_config_dirs`). To enable the rtdemo plugin the configuration goes as follows.
 ```python
 [rtdemo]
 enable_plugin = true
